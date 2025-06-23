@@ -1,0 +1,121 @@
+/* ---------------------------
+   mission SECTION
+---------------------------- */
+
+.mission {
+  position: relative;
+  height: 70vh;
+  background: url('https://cdn.cet-power.com/uploads/2024/02/Illustrations-episode-3-2.jpg') no-repeat center center/cover;
+  overflow: hidden;
+}
+
+/* Gradient overlay: black left → transparent right */
+.mission::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 0.8) 100%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* Overlay container (for text & image) */
+.mission-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1); /* transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 100px;
+  margin-right: 450px;
+  /* size: 00px; */
+  
+}
+
+
+/* Text content left side */
+.mission-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 2 0rem;
+  /* margin-top: 200px; */
+  /* margin-left: 210px; */
+  margin-bottom: 150px;
+  /* margin-right: 0.5px; */
+  margin-left: 100px;
+  /* z-index: 2; */
+}
+
+.mission-overlay h1 {
+  font-size: 2rem;
+  font-weight: 600px;
+  color: #ffffff;
+  margin-bottom: 170px;
+  margin-right: 165px;
+}
+.lean {
+  color: #2d7ff9;
+}
+.green {
+  color: #99ff00;
+}
+.mission .para {
+  font-size: 1.6rem;
+  margin-top: 7rem;
+  /* display: flex; */
+  margin-left: 250px;
+  margin-right: 1px;
+  color: #d1d5db;
+  /* background-color: #78f92d; */
+  width: 20000px;
+  border-right: #2d7ff9;
+ 
+}
+.mission .para1{
+  font-size: 1.075rem;
+  margin-bottom: 2rem;
+  display: flex;
+  margin-top: 20px;
+  margin-right: 1px;
+  color: #d1d5db;
+  /* width: 25000px; */
+  /* background-color: #2d7ff9; */
+  /* padding: auto; */
+  
+}
+.mission .img1{
+  height: 420px;
+  width: 100px;
+  margin-top: 150px;
+  animation: float-down 5s infinite ease-in-out;
+}
+@keyframes float-down {
+  0% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+.mission-overlay .img{
+  height: 100px;
+  
+}

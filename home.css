@@ -1,0 +1,317 @@
+/* ---------------------------
+   RESET + GLOBAL STYLES
+---------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #000;
+  color: #fff;
+}
+
+/* ---------------------------
+   NAVBAR
+---------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #000;
+  z-index: 999;
+  padding: 1rem 2rem;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #99ff00;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #99ff00;
+}
+.quote-btn {
+  background: #99ff00;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.quote-btn:hover {
+  background: #99ff00;
+}
+
+/* ---------------------------
+   HERO SECTION
+---------------------------- */
+.hero {
+  position: relative;
+  height: 70vh;
+  background: url('images/background.jpg') no-repeat center center/cover;
+  overflow: hidden;
+
+}
+
+/* Gradient overlay: black left → transparent right */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 0.3) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+/* Overlay container (for text & image) */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 100px;
+  margin-right: 450px;
+  /* size: 00px; */
+  
+}
+
+/* Text content left side */
+.hero-content {
+  text-align: left;
+  max-width: 600px;
+  padding: 2 0rem;
+  margin-top: 200px;
+  margin-left: 210px;
+  margin-right: auto;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 1.7rem;
+  font-weight: 00;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.lean {
+  color: #99ff00;
+}
+.green {
+  color: #2d7ff9;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #d1d5db;
+}
+.hero-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+.btn.primary {
+  background: #99ff00;
+  color: #000;
+}
+.btn.secondary {
+  border: 2px solid #99ff00;
+  color: #99ff00;
+  background: transparent;
+}
+.btn.primary:hover {
+  background: #3576df;
+}
+.btn.secondary:hover {
+  background: #99ff00;
+  color: #000;
+}
+
+.highlights {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000ad;
+  color: #fff;
+  padding: 3rem 3rem;
+  border-top: 1px solid #2d7ff9;
+  width: 100%;
+  /* margin-bottom: px; */
+  
+}
+
+.highlight-card {
+  flex: 1;
+  text-align: center;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  /* border-top: 1px solid #34d022; */
+  /* margin-top:1000px; */
+}
+
+.highlight-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  /* margin-top: 0rem; */
+}
+
+.highlight-card .line {
+  display: block;
+  height: 2px;
+  width: 40%;
+  background-color: #99ff00;
+  margin: 0 auto;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.highlight-card:hover .line {
+  width: 60%;
+  background-color: #2d7ff9;
+}
+
+/* Hidden image initially */
+.hover-image {
+  opacity: 0;
+  max-height: 0;
+  display: block;
+  margin: 1rem auto 0 auto;
+  width: 100px;
+  height: auto;
+  transition: all 0.4s ease;
+   box-shadow: 0 4px 12px rgba(255, 255, 255, 0);
+}
+
+/* Show on hover */
+.highlight-card:hover .hover-image {
+  opacity: 1;
+  max-height: 100px;
+}
+
+
+/* Vertical lines between middle cards */
+.border-left-right {
+  border-left: 1px solid #2d7ff9;
+  border-right: 1px solid #2d7ff9;
+}
+/* Hide text initially */
+.hover-text {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-top: 0.5rem;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* Show text on hover */
+.highlight-card:hover .hover-text {
+  opacity: 1;
+  max-height: 100px;
+}
+
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .border-left-right {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #334155;
+    border-bottom: 1px solid #334155;
+    margin: 1rem 0;
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+  }
+}
+
+
+/* Right image inside hero */
+.hero-image img {
+  max-width: 100%;
+  width: 800px;
+  height: auto;
+  /* padding: 0.1px; */
+  /* margin-bottom: 200rem; */
+  /* z-index: 5; */
+
+}
+
+/* Optional top-right image (if used) */
+.corner-image {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  /* height: auto; */
+  z-index: 10; /* Highest value to be on top of all content */
+  pointer-events: none; /* Prevents interference with clicks if decorative */
+  
+}
+
+
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+---------------------------- */
+@media (max-width: 768px) {
+  .nav-links,
+  .quote-btn {
+    display: none;
+  }
+
+  .hero-content {
+    margin: 80px 1rem 0;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
